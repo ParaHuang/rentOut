@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'room'
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,20 @@ WSGI_APPLICATION = 'rentout.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        # 数据库引擎（是mysql还是oracle等）
+        'ENGINE': 'django.db.backends.mysql',
+        # 数据库的名字
+        'NAME': 'rentout',
+        # 连接mysql数据库的用户名
+        'USER': 'root',
+        # 连接mysql数据库的密码
+        'PASSWORD': 'a123',
+        # mysql数据库的主机地址
+        'HOST': '127.0.0.1',
+        # mysql数据库的端口号
+        'PORT': '3306',
     }
 }
 
