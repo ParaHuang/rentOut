@@ -1,9 +1,9 @@
 from django.urls import path
-from . import views
+from .views import UserRegisterView
 
 # 指定应用名称（应用命名空间），防止命名冲突
 app_name = "room"
 
 urlpatterns = [
-    path('register',views.register,name="register")
+    path('register',UserRegisterView.as_view(),name="register")
 ]
