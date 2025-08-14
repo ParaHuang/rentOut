@@ -4,8 +4,6 @@ from django.db import models
 
 class Area(models.Model):
     city = models.CharField(max_length=30,null=False)
-    state = models.ForeignKey("self", on_delete=models.SET_NULL, null=True, blank=True)
-
     class Meta:
         db_table = 'area'
 class User(models.Model):
